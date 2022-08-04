@@ -3,7 +3,6 @@
 
 target 'EventsDemoApp' do
   pod 'SwiftGen', '~> 6.0'
-  pod 'SwiftLint'
   pod 'Moya/RxSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
