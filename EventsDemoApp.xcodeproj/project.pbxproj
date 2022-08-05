@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		39EB2FE644C7DF866EBC0D61 /* Pods_EventsDemoApp_EventsDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FD66DD05CFBCCE19619D21 /* Pods_EventsDemoApp_EventsDemoAppUITests.framework */; };
+		59245406289D512F001B4100 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59245405289D512F001B4100 /* ScheduleResponse.swift */; };
+		59245409289D5447001B4100 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59245408289D5447001B4100 /* ScheduleModel.swift */; };
+		5924540C289D54A5001B4100 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924540A289D54A5001B4100 /* ScheduleTableViewCell.swift */; };
+		5924540D289D54A5001B4100 /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5924540B289D54A5001B4100 /* ScheduleTableViewCell.xib */; };
+		5924540F289D5902001B4100 /* SchedulesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924540E289D5902001B4100 /* SchedulesApi.swift */; };
+		59245411289D594F001B4100 /* SchedulesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59245410289D594F001B4100 /* SchedulesServices.swift */; };
 		5999F497289903E7004C61BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5999F496289903E7004C61BA /* AppDelegate.swift */; };
 		5999F499289903E7004C61BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5999F498289903E7004C61BA /* SceneDelegate.swift */; };
 		5999F4A0289903EF004C61BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5999F49F289903EF004C61BA /* Assets.xcassets */; };
@@ -88,6 +94,12 @@
 
 /* Begin PBXFileReference section */
 		1E5A9E0CD505595B0CDFB542 /* Pods-EventsDemoApp-EventsDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsDemoApp-EventsDemoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EventsDemoApp-EventsDemoAppUITests/Pods-EventsDemoApp-EventsDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		59245405289D512F001B4100 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
+		59245408289D5447001B4100 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		5924540A289D54A5001B4100 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		5924540B289D54A5001B4100 /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		5924540E289D5902001B4100 /* SchedulesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesApi.swift; sourceTree = "<group>"; };
+		59245410289D594F001B4100 /* SchedulesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesServices.swift; sourceTree = "<group>"; };
 		5999F493289903E7004C61BA /* EventsDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5999F496289903E7004C61BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5999F498289903E7004C61BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +201,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59245407289D5428001B4100 /* schedules */ = {
+			isa = PBXGroup;
+			children = (
+				59245408289D5447001B4100 /* ScheduleModel.swift */,
+				5924540A289D54A5001B4100 /* ScheduleTableViewCell.swift */,
+				5924540B289D54A5001B4100 /* ScheduleTableViewCell.xib */,
+			);
+			path = schedules;
+			sourceTree = "<group>";
+		};
 		5999F48A289903E6004C61BA = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +389,7 @@
 		59FC4451289C420E00940B40 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				59245407289D5428001B4100 /* schedules */,
 				59FC44C3289CF93F00940B40 /* events */,
 			);
 			path = Views;
@@ -387,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				59FC44BE289C4C0600940B40 /* EventsResponse.swift */,
+				59245405289D512F001B4100 /* ScheduleResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -395,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				59FC44BC289C4B2600940B40 /* EventsApi.swift */,
+				5924540E289D5902001B4100 /* SchedulesApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -403,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				59FC44BA289C4B0200940B40 /* EventsServices.swift */,
+				59245410289D594F001B4100 /* SchedulesServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -572,6 +598,7 @@
 			files = (
 				59FC44B5289C458800940B40 /* SchedulesViewController.xib in Resources */,
 				59FC44B9289C45ED00940B40 /* EventsViewController.xib in Resources */,
+				5924540D289D54A5001B4100 /* ScheduleTableViewCell.xib in Resources */,
 				59FC44C7289CF95D00940B40 /* EventsTableViewCell.xib in Resources */,
 				5999F4A3289903EF004C61BA /* LaunchScreen.storyboard in Resources */,
 				59FC4485289C420F00940B40 /* HomeViewController.xib in Resources */,
@@ -748,20 +775,24 @@
 				59FC4484289C420F00940B40 /* HomeViewModel.swift in Sources */,
 				59FC448F289C420F00940B40 /* Storyboarded.swift in Sources */,
 				59FC44BB289C4B0200940B40 /* EventsServices.swift in Sources */,
+				5924540F289D5902001B4100 /* SchedulesApi.swift in Sources */,
 				59FC44AB289C44CF00940B40 /* SchedulesViewModel.swift in Sources */,
 				59FC4414289C413100940B40 /* UITextView.swift in Sources */,
 				59FC4487289C420F00940B40 /* TabCoordinator.swift in Sources */,
 				59FC4409289C413100940B40 /* UITextField.swift in Sources */,
 				59FC44B8289C45ED00940B40 /* EventsViewController.swift in Sources */,
+				59245411289D594F001B4100 /* SchedulesServices.swift in Sources */,
 				59FC4412289C413100940B40 /* UILabel.swift in Sources */,
 				59FC4493289C420F00940B40 /* Coordinator.swift in Sources */,
 				59FC4400289C413100940B40 /* Date.swift in Sources */,
+				5924540C289D54A5001B4100 /* ScheduleTableViewCell.swift in Sources */,
 				59FC4486289C420F00940B40 /* HomeViewController.swift in Sources */,
 				5999F497289903E7004C61BA /* AppDelegate.swift in Sources */,
 				59FC4402289C413100940B40 /* CNContact.swift in Sources */,
 				59FC44A3289C420F00940B40 /* UniversalLoader.swift in Sources */,
 				59FC4411289C413100940B40 /* Checkbox.swift in Sources */,
 				59FC440C289C413100940B40 /* ImageHelper.swift in Sources */,
+				59245409289D5447001B4100 /* ScheduleModel.swift in Sources */,
 				59FC4405289C413100940B40 /* NSMutableAttributedString+Extensions.swift in Sources */,
 				59FC4413289C413100940B40 /* UIAlertController.swift in Sources */,
 				59FC43FF289C413100940B40 /* URLComponents.swift in Sources */,
@@ -769,6 +800,7 @@
 				59FC4404289C413100940B40 /* UIColor.swift in Sources */,
 				59FC4403289C413100940B40 /* UIStackView.swift in Sources */,
 				59FC4408289C413100940B40 /* MPVolumeView.swift in Sources */,
+				59245406289D512F001B4100 /* ScheduleResponse.swift in Sources */,
 				59FC4491289C420F00940B40 /* BaseNavigationController.swift in Sources */,
 				59FC44B1289C44FC00940B40 /* SchedulesCoordinator.swift in Sources */,
 				59FC440B289C413100940B40 /* String.swift in Sources */,
