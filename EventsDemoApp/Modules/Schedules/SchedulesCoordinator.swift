@@ -10,8 +10,9 @@ import Foundation
 class SchedulesCoordinator: Coordinator {
     func primaryViewController() -> SchedulesViewController {
         let vc = SchedulesViewController()
-        // let model = ViewModel()
+        let model = SchedulesViewModel()
 
+        vc.viewModel = model
         return vc
     }
 }

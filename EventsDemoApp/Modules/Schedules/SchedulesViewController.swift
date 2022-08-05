@@ -5,9 +5,16 @@
 //  Created by Edwin Weru on 04/08/2022.
 //
 
+import RxCocoa
+import RxSwift
 import UIKit
 
 class SchedulesViewController: UIViewController {
+    @IBOutlet var tableView: UITableView!
+
+    var viewModel: SchedulesViewModel!
+    private let disposeBag = DisposeBag()
+
     init() {
         super.init(nibName: nil, bundle: nil)
         tabBarItem = UITabBarItem(
@@ -25,5 +32,21 @@ class SchedulesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Schedules"
+        setupTableView()
+    }
+
+    private func setupTableView() {
+        tableView.register(ScheduleTableViewCell.nib(), forCellReuseIdentifier: ScheduleTableViewCell.reuseIdentifier)
+        tableView.rowHeight = 120
+
+        viewModel.scheduleSubject
+            .asObservable()
+            .bind(to: tableView.rx.items(
+                cellIdentifier: ScheduleTableViewCell.reuseIdentifier,
+                cellType: ScheduleTableViewCell.self
+            )) { [weak self] _, item, cell in
+                cell.configure(with: ScheduleModel(model: item))
+            }
+            .disposed(by: disposeBag)
     }
 }
