@@ -12,7 +12,20 @@ class EventsCoodinator: Coordinator {
         let vc = EventsViewController()
         let model = EventsViewModel()
         vc.viewModel = model
+        vc.goToEvent = showEventDetails
 
-        return vc
+        let navC = BaseNavigationController(rootViewController: vc)
+        navigationController = navC
+        return navC
+    }
+
+    private func showEventDetails(selected: EventModel?) {
+        let vc = VideoPlaybackViewController()
+        let model = VideoPlaybackViewModel()
+
+        model.selected = selected
+        vc.viewModel = model
+
+        push(viewController: vc)
     }
 }

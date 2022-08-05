@@ -12,6 +12,7 @@ import UIKit
 class EventsViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
+    var goToEvent: (EventModel?) -> Void = { _ in }
     var viewModel: EventsViewModel!
     private let disposeBag = DisposeBag()
 
@@ -46,6 +47,13 @@ class EventsViewController: UIViewController {
             )) { [weak self] _, item, cell in
                 cell.configure(with: EventModel(model: item))
             }
+            .disposed(by: disposeBag)
+
+        tableView.rx.modelSelected(EventsResponse.self)
+            .subscribe(onNext: { [weak self] item in
+                let model = EventModel(model: item)
+                self?.goToEvent(model)
+            })
             .disposed(by: disposeBag)
     }
 }
