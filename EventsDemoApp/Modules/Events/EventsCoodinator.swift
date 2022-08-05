@@ -10,7 +10,8 @@ import UIKit
 class EventsCoodinator: Coordinator {
     func primaryViewController() -> EventsViewController {
         let vc = EventsViewController()
-        // let model = ViewModel()
+        let model = EventsViewModel()
+        vc.viewModel = model
 
         return vc
     }

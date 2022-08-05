@@ -58,6 +58,10 @@
 		59FC44B5289C458800940B40 /* SchedulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FC44B3289C458800940B40 /* SchedulesViewController.xib */; };
 		59FC44B8289C45ED00940B40 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC44B6289C45ED00940B40 /* EventsViewController.swift */; };
 		59FC44B9289C45ED00940B40 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FC44B7289C45ED00940B40 /* EventsViewController.xib */; };
+		59FC44BB289C4B0200940B40 /* EventsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC44BA289C4B0200940B40 /* EventsServices.swift */; };
+		59FC44BD289C4B2600940B40 /* EventsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC44BC289C4B2600940B40 /* EventsApi.swift */; };
+		59FC44BF289C4C0600940B40 /* EventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC44BE289C4C0600940B40 /* EventsResponse.swift */; };
+		59FC44C2289C4FF700940B40 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC44C1289C4FF700940B40 /* Contants.swift */; };
 		8F66CDDA8CEF4747F4EEFFAD /* Pods_EventsDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1510A480625E7F3070543BF /* Pods_EventsDemoAppTests.framework */; };
 		BC46F7873A7AD2F39D91F151 /* Pods_EventsDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24E9930D9255E35C8CC8357 /* Pods_EventsDemoApp.framework */; };
 /* End PBXBuildFile section */
@@ -137,6 +141,10 @@
 		59FC44B3289C458800940B40 /* SchedulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchedulesViewController.xib; sourceTree = "<group>"; };
 		59FC44B6289C45ED00940B40 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		59FC44B7289C45ED00940B40 /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
+		59FC44BA289C4B0200940B40 /* EventsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventsServices.swift; path = ../../../../../../../Desktop/EventsServices.swift; sourceTree = "<group>"; };
+		59FC44BC289C4B2600940B40 /* EventsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApi.swift; sourceTree = "<group>"; };
+		59FC44BE289C4C0600940B40 /* EventsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsResponse.swift; sourceTree = "<group>"; };
+		59FC44C1289C4FF700940B40 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		5E51D911555353067C5680D1 /* Pods-EventsDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsDemoApp.release.xcconfig"; path = "Target Support Files/Pods-EventsDemoApp/Pods-EventsDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		7F146F0646E3978E14FA0E26 /* Pods-EventsDemoApp-EventsDemoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsDemoApp-EventsDemoAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EventsDemoApp-EventsDemoAppUITests/Pods-EventsDemoApp-EventsDemoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		80FD66DD05CFBCCE19619D21 /* Pods_EventsDemoApp_EventsDemoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventsDemoApp_EventsDemoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,9 +210,9 @@
 			children = (
 				59FC4442289C420D00940B40 /* App */,
 				59FC43D7289C1B1B00940B40 /* Resources */,
+				59FC4460289C420F00940B40 /* Networking */,
 				59FC444D289C420E00940B40 /* Models */,
 				59FC4415289C420C00940B40 /* Modules */,
-				59FC4460289C420F00940B40 /* Networking */,
 				59FC4451289C420E00940B40 /* Views */,
 				59FC43E4289C413100940B40 /* Common */,
 				5999F4A1289903EF004C61BA /* LaunchScreen.storyboard */,
@@ -244,6 +252,7 @@
 		59FC43E4289C413100940B40 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				59FC44C0289C4FCE00940B40 /* Utils */,
 				59FC43E5289C413100940B40 /* Extensions */,
 				59FC43FE289C413100940B40 /* Protocols */,
 			);
@@ -370,6 +379,7 @@
 		59FC4462289C420F00940B40 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				59FC44BE289C4C0600940B40 /* EventsResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -377,6 +387,7 @@
 		59FC4466289C420F00940B40 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				59FC44BC289C4B2600940B40 /* EventsApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -384,6 +395,7 @@
 		59FC4468289C420F00940B40 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				59FC44BA289C4B0200940B40 /* EventsServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -397,6 +409,14 @@
 				59FC44B3289C458800940B40 /* SchedulesViewController.xib */,
 			);
 			path = Schedules;
+			sourceTree = "<group>";
+		};
+		59FC44C0289C4FCE00940B40 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				59FC44C1289C4FF700940B40 /* Contants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		782BE50268C0CF9825F19892 /* Frameworks */ = {
@@ -708,6 +728,7 @@
 				59FC448E289C420F00940B40 /* BaseViewController.swift in Sources */,
 				59FC4484289C420F00940B40 /* HomeViewModel.swift in Sources */,
 				59FC448F289C420F00940B40 /* Storyboarded.swift in Sources */,
+				59FC44BB289C4B0200940B40 /* EventsServices.swift in Sources */,
 				59FC44AB289C44CF00940B40 /* SchedulesViewModel.swift in Sources */,
 				59FC4414289C413100940B40 /* UITextView.swift in Sources */,
 				59FC4487289C420F00940B40 /* TabCoordinator.swift in Sources */,
@@ -733,12 +754,15 @@
 				59FC44B1289C44FC00940B40 /* SchedulesCoordinator.swift in Sources */,
 				59FC440B289C413100940B40 /* String.swift in Sources */,
 				59FC440E289C413100940B40 /* UIViewController.swift in Sources */,
+				59FC44C2289C4FF700940B40 /* Contants.swift in Sources */,
 				59FC440F289C413100940B40 /* UIWindow.swift in Sources */,
+				59FC44BD289C4B2600940B40 /* EventsApi.swift in Sources */,
 				59FC4406289C413100940B40 /* UITableView.swift in Sources */,
 				59FC440D289C413100940B40 /* UIButton.swift in Sources */,
 				59FC44B4289C458800940B40 /* SchedulesViewController.swift in Sources */,
 				59FC4479289C420F00940B40 /* EventsCoodinator.swift in Sources */,
 				59FC43DA289C1C3500940B40 /* Strings+Generated.swift in Sources */,
+				59FC44BF289C4C0600940B40 /* EventsResponse.swift in Sources */,
 				5999F499289903E7004C61BA /* SceneDelegate.swift in Sources */,
 				59FC448D289C420F00940B40 /* AppCoordinator.swift in Sources */,
 				59FC440A289C413100940B40 /* MaterialColors.swift in Sources */,

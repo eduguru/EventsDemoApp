@@ -8,6 +8,8 @@
 import UIKit
 
 class EventsViewController: UIViewController {
+    var viewModel: EventsViewModel!
+
     init() {
         super.init(nibName: nil, bundle: nil)
         tabBarItem = UITabBarItem(
