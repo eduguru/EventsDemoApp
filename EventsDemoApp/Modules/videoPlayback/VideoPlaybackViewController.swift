@@ -35,9 +35,6 @@ class VideoPlaybackViewController: UIViewController {
         }
 
         self.imageView.kf.setImage(with: AVAssetImageDataProvider(assetURL: videoUrl, seconds: 1))
-//        self.getThumbnailImageFromVideoUrl(url: videoUrl) { thumbNailImage in
-//            self.imageView.image = thumbNailImage
-//        }
     }
 
     @objc func actionPlay() {
@@ -47,33 +44,11 @@ class VideoPlaybackViewController: UIViewController {
         self.playvideo(videourl: url)
     }
 
-    private func getThumbnailImageFromVideoUrl(url: URL, completion: @escaping ((_ image: UIImage?) -> Void)) {
-        DispatchQueue.global().async {
-            let asset = AVAsset(url: url)
-            let avAssetImageGenerator = AVAssetImageGenerator(asset: asset)
-            avAssetImageGenerator.appliesPreferredTrackTransform = true
-            let thumnailTime = CMTimeMake(value: 2, timescale: 1)
-
-            do {
-                let cgThumbImage = try avAssetImageGenerator.copyCGImage(at: thumnailTime, actualTime: nil)
-                let thumbNailImage = UIImage(cgImage: cgThumbImage)
-                DispatchQueue.main.async {
-                    completion(thumbNailImage)
-                }
-            } catch {
-                print(error.localizedDescription)
-                DispatchQueue.main.async {
-                    completion(nil)
-                }
-            }
-        }
-    }
-
     private func playvideo(videourl: String) {
         guard let url = URL(string: videourl) else { return }
 
         let player = AVPlayer(url: url)
-        var playerController = AVPlayerViewController()
+        let playerController = AVPlayerViewController()
         playerController.player = player
         playerController.allowsPictureInPicturePlayback = true
         playerController.player?.play()
