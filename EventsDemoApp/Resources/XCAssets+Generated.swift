@@ -28,6 +28,8 @@ internal enum Asset {
     internal static let _002Calendar = ImageAsset(name: "002-calendar")
     internal static let accentColor = ColorAsset(name: "AccentColor")
     internal static let iconEvents = ImageAsset(name: "icon-events")
+    internal static let iconPlayRed = ImageAsset(name: "icon-play-red")
+    internal static let iconPlay = ImageAsset(name: "icon-play")
 }
 
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

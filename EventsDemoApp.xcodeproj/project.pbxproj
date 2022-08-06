@@ -14,6 +14,9 @@
 		5924540D289D54A5001B4100 /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5924540B289D54A5001B4100 /* ScheduleTableViewCell.xib */; };
 		5924540F289D5902001B4100 /* SchedulesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924540E289D5902001B4100 /* SchedulesApi.swift */; };
 		59245411289D594F001B4100 /* SchedulesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59245410289D594F001B4100 /* SchedulesServices.swift */; };
+		59245414289DA6E2001B4100 /* VideoPlaybackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59245413289DA6E2001B4100 /* VideoPlaybackViewModel.swift */; };
+		59245417289DA6FE001B4100 /* VideoPlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59245415289DA6FE001B4100 /* VideoPlaybackViewController.swift */; };
+		59245418289DA6FE001B4100 /* VideoPlaybackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59245416289DA6FE001B4100 /* VideoPlaybackViewController.xib */; };
 		5999F497289903E7004C61BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5999F496289903E7004C61BA /* AppDelegate.swift */; };
 		5999F499289903E7004C61BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5999F498289903E7004C61BA /* SceneDelegate.swift */; };
 		5999F4A0289903EF004C61BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5999F49F289903EF004C61BA /* Assets.xcassets */; };
@@ -100,6 +103,9 @@
 		5924540B289D54A5001B4100 /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		5924540E289D5902001B4100 /* SchedulesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesApi.swift; sourceTree = "<group>"; };
 		59245410289D594F001B4100 /* SchedulesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesServices.swift; sourceTree = "<group>"; };
+		59245413289DA6E2001B4100 /* VideoPlaybackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaybackViewModel.swift; sourceTree = "<group>"; };
+		59245415289DA6FE001B4100 /* VideoPlaybackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaybackViewController.swift; sourceTree = "<group>"; };
+		59245416289DA6FE001B4100 /* VideoPlaybackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlaybackViewController.xib; sourceTree = "<group>"; };
 		5999F493289903E7004C61BA /* EventsDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5999F496289903E7004C61BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5999F498289903E7004C61BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +215,16 @@
 				5924540B289D54A5001B4100 /* ScheduleTableViewCell.xib */,
 			);
 			path = schedules;
+			sourceTree = "<group>";
+		};
+		59245412289D61A0001B4100 /* videoPlayback */ = {
+			isa = PBXGroup;
+			children = (
+				59245413289DA6E2001B4100 /* VideoPlaybackViewModel.swift */,
+				59245415289DA6FE001B4100 /* VideoPlaybackViewController.swift */,
+				59245416289DA6FE001B4100 /* VideoPlaybackViewController.xib */,
+			);
+			path = videoPlayback;
 			sourceTree = "<group>";
 		};
 		5999F48A289903E6004C61BA = {
@@ -328,6 +344,7 @@
 		59FC4415289C420C00940B40 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				59245412289D61A0001B4100 /* videoPlayback */,
 				59FC44A9289C44B200940B40 /* Schedules */,
 				59FC4428289C420C00940B40 /* Events */,
 				59FC4436289C420C00940B40 /* Main */,
@@ -596,6 +613,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59245418289DA6FE001B4100 /* VideoPlaybackViewController.xib in Resources */,
 				59FC44B5289C458800940B40 /* SchedulesViewController.xib in Resources */,
 				59FC44B9289C45ED00940B40 /* EventsViewController.xib in Resources */,
 				5924540D289D54A5001B4100 /* ScheduleTableViewCell.xib in Resources */,
@@ -792,9 +810,11 @@
 				59FC44A3289C420F00940B40 /* UniversalLoader.swift in Sources */,
 				59FC4411289C413100940B40 /* Checkbox.swift in Sources */,
 				59FC440C289C413100940B40 /* ImageHelper.swift in Sources */,
+				59245417289DA6FE001B4100 /* VideoPlaybackViewController.swift in Sources */,
 				59245409289D5447001B4100 /* ScheduleModel.swift in Sources */,
 				59FC4405289C413100940B40 /* NSMutableAttributedString+Extensions.swift in Sources */,
 				59FC4413289C413100940B40 /* UIAlertController.swift in Sources */,
+				59245414289DA6E2001B4100 /* VideoPlaybackViewModel.swift in Sources */,
 				59FC43FF289C413100940B40 /* URLComponents.swift in Sources */,
 				59FC447A289C420F00940B40 /* EventsViewModel.swift in Sources */,
 				59FC4404289C413100940B40 /* UIColor.swift in Sources */,
