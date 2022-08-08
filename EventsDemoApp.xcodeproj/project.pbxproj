@@ -17,6 +17,7 @@
 		59245414289DA6E2001B4100 /* VideoPlaybackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59245413289DA6E2001B4100 /* VideoPlaybackViewModel.swift */; };
 		59245417289DA6FE001B4100 /* VideoPlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59245415289DA6FE001B4100 /* VideoPlaybackViewController.swift */; };
 		59245418289DA6FE001B4100 /* VideoPlaybackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59245416289DA6FE001B4100 /* VideoPlaybackViewController.xib */; };
+		593DC28428A14C3B0070617C /* EventsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593DC28328A14C3B0070617C /* EventsServices.swift */; };
 		5999F497289903E7004C61BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5999F496289903E7004C61BA /* AppDelegate.swift */; };
 		5999F499289903E7004C61BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5999F498289903E7004C61BA /* SceneDelegate.swift */; };
 		5999F4A0289903EF004C61BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5999F49F289903EF004C61BA /* Assets.xcassets */; };
@@ -67,7 +68,6 @@
 		59FC44B5289C458800940B40 /* SchedulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FC44B3289C458800940B40 /* SchedulesViewController.xib */; };
 		59FC44B8289C45ED00940B40 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC44B6289C45ED00940B40 /* EventsViewController.swift */; };
 		59FC44B9289C45ED00940B40 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FC44B7289C45ED00940B40 /* EventsViewController.xib */; };
-		59FC44BB289C4B0200940B40 /* EventsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC44BA289C4B0200940B40 /* EventsServices.swift */; };
 		59FC44BD289C4B2600940B40 /* EventsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC44BC289C4B2600940B40 /* EventsApi.swift */; };
 		59FC44BF289C4C0600940B40 /* EventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC44BE289C4C0600940B40 /* EventsResponse.swift */; };
 		59FC44C2289C4FF700940B40 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FC44C1289C4FF700940B40 /* Contants.swift */; };
@@ -106,6 +106,7 @@
 		59245413289DA6E2001B4100 /* VideoPlaybackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaybackViewModel.swift; sourceTree = "<group>"; };
 		59245415289DA6FE001B4100 /* VideoPlaybackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaybackViewController.swift; sourceTree = "<group>"; };
 		59245416289DA6FE001B4100 /* VideoPlaybackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPlaybackViewController.xib; sourceTree = "<group>"; };
+		593DC28328A14C3B0070617C /* EventsServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsServices.swift; sourceTree = "<group>"; };
 		5999F493289903E7004C61BA /* EventsDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5999F496289903E7004C61BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5999F498289903E7004C61BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,7 +163,6 @@
 		59FC44B3289C458800940B40 /* SchedulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchedulesViewController.xib; sourceTree = "<group>"; };
 		59FC44B6289C45ED00940B40 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		59FC44B7289C45ED00940B40 /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
-		59FC44BA289C4B0200940B40 /* EventsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventsServices.swift; path = ../../../../../../../Desktop/EventsServices.swift; sourceTree = "<group>"; };
 		59FC44BC289C4B2600940B40 /* EventsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsApi.swift; sourceTree = "<group>"; };
 		59FC44BE289C4C0600940B40 /* EventsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsResponse.swift; sourceTree = "<group>"; };
 		59FC44C1289C4FF700940B40 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
@@ -444,7 +444,7 @@
 		59FC4468289C420F00940B40 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				59FC44BA289C4B0200940B40 /* EventsServices.swift */,
+				593DC28328A14C3B0070617C /* EventsServices.swift */,
 				59245410289D594F001B4100 /* SchedulesServices.swift */,
 			);
 			path = Services;
@@ -792,7 +792,6 @@
 				59FC448E289C420F00940B40 /* BaseViewController.swift in Sources */,
 				59FC4484289C420F00940B40 /* HomeViewModel.swift in Sources */,
 				59FC448F289C420F00940B40 /* Storyboarded.swift in Sources */,
-				59FC44BB289C4B0200940B40 /* EventsServices.swift in Sources */,
 				5924540F289D5902001B4100 /* SchedulesApi.swift in Sources */,
 				59FC44AB289C44CF00940B40 /* SchedulesViewModel.swift in Sources */,
 				59FC4414289C413100940B40 /* UITextView.swift in Sources */,
@@ -804,6 +803,7 @@
 				59FC4493289C420F00940B40 /* Coordinator.swift in Sources */,
 				59FC4400289C413100940B40 /* Date.swift in Sources */,
 				5924540C289D54A5001B4100 /* ScheduleTableViewCell.swift in Sources */,
+				593DC28428A14C3B0070617C /* EventsServices.swift in Sources */,
 				59FC4486289C420F00940B40 /* HomeViewController.swift in Sources */,
 				5999F497289903E7004C61BA /* AppDelegate.swift in Sources */,
 				59FC4402289C413100940B40 /* CNContact.swift in Sources */,
