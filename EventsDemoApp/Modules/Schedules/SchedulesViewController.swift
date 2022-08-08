@@ -15,6 +15,8 @@ class SchedulesViewController: UIViewController {
     var viewModel: SchedulesViewModel!
     private let disposeBag = DisposeBag()
 
+    var controllerWillDisappear: () -> Void = {}
+
     init() {
         super.init(nibName: nil, bundle: nil)
         tabBarItem = UITabBarItem(
@@ -33,6 +35,10 @@ class SchedulesViewController: UIViewController {
         super.viewDidLoad()
         title = "Schedules"
         setupTableView()
+    }
+
+    override func viewWillDisappear(_: Bool) {
+        self.controllerWillDisappear()
     }
 
     private func setupTableView() {
