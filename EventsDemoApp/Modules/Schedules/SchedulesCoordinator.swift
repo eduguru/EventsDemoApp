@@ -12,6 +12,7 @@ class SchedulesCoordinator: Coordinator {
         let vc = SchedulesViewController()
         let model = SchedulesViewModel()
 
+        vc.controllerWillDisappear = model.invalidateTimer
         vc.viewModel = model
         return vc
     }
