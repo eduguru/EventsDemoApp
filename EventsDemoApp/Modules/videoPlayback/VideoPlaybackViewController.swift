@@ -34,7 +34,7 @@ class VideoPlaybackViewController: UIViewController {
             return
         }
 
-        self.imageView.kf.setImage(with: AVAssetImageDataProvider(assetURL: videoUrl, seconds: 1))
+        self.imageView.kf.setImage(with: AVAssetImageDataProvider(assetURL: videoUrl, seconds: 1.5))
     }
 
     @objc func actionPlay() {
