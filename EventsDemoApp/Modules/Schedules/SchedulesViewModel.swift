@@ -26,4 +26,8 @@ class SchedulesViewModel {
             })
             .disposed(by: disposeBag)
     }
+
+    deinit {
+        print("deinit")
+    }
 }
