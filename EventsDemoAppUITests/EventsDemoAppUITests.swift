@@ -10,24 +10,22 @@ import XCTest
 class EventsDemoAppUITests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+      continueAfterFailure = false
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testExample() throws {
-        // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        app.buttons["icon play red"].tap()
+        app/*@START_MENU_TOKEN@*/.buttons["Play/Pause"]/*[[".buttons[\"Pause\"]",".buttons[\"Play\/Pause\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app/*@START_MENU_TOKEN@*/.buttons["Done"]/*[[".buttons[\"Close\"]",".buttons[\"Done\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Suns @ Mavericks"].buttons["Events"].tap()
+        
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"Suns @ Mavericks")/*[[".cells.containing(.staticText, identifier:\"2022-08-11T04:30:43.174Z\")",".cells.containing(.staticText, identifier:\"Suns @ Mavericks\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.children(matching: .other).element(boundBy: 0).swipeUp()
+        tablesQuery/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"#DAZNbreakfast")/*[[".cells.containing(.staticText, identifier:\"Interview Sadio Mane\")",".cells.containing(.staticText, identifier:\"#DAZNbreakfast\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["2022-08-11T10:30:43.174Z"].swipeUp()
+        tablesQuery.cells.containing(.staticText, identifier:"PSG v Strasbourg").element.swipeDown()
+        app.tabBars["Tab Bar"].buttons["Schedules"].tap()
+                
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testLaunchPerformance() throws {
